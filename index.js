@@ -26,19 +26,19 @@ app.post('/season/', function (req, res) {
   switch (season) {
     case 'proljeće':
     case 'spring':
-      response = 'Proljeće je vrijeme obnove, sve cvjeta!';
+      response = 'Na proljeće je najbolje otići u Nizozemsku zbog cvata tulipana!';
       break;
     case 'ljeto':
     case 'summer':
-      response = 'Ljeto je toplo i sunčano, savršen trenutak za odmor!';
+      response = 'Ljeto je toplo i sunčano, savršen kupanje na Mediteranskim obalama Hrvatske, ili na obalama Grčke, Italije i Španjolske!';
       break;
     case 'jesen':
     case 'fall':
-      response = 'Jesen je vrijeme za berbu i pripremu za zimu.';
+      response = 'Zemlja koja savršeno opisuje jesen i koju svakako trebaš posjetiti je Engleska.';
       break;
     case 'zima':
     case 'winter':
-      response = 'Zima donosi hladnoću i snijeg, vrijeme za odmor i uživanje u toplom domu!';
+      response = 'Zima donosi hladnoću i snijeg, vrijeme za odmor i skijanje u Austriji, Sloveniji ili za posjet skandinavskim zemljama.';
       break;
     default:
       response = 'Nisam siguran na koje godišnje doba misliš, možeš li biti precizniji?';

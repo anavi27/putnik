@@ -18,12 +18,12 @@ app.post('/season/', function (req, res) {
   console.log(JSON.stringify(req.body));
 
   // Preuzimanje parametra "season" iz tela zahteva
-  var season = req.body.queryResult.parameters.season.toLowerCase();
+  var godisnje_doba = req.body.queryResult.parameters.godisnje_doba.toLowerCase();
   
   // Odgovor na osnovu godišnjeg doba
   var response = '';
 
-  switch (season) {
+  switch (godisnje_doba) {
     case 'proljeće':
     case 'spring':
       response = 'Na proljeće je najbolje otići u Nizozemsku zbog cvata tulipana!';
@@ -46,9 +46,7 @@ app.post('/season/', function (req, res) {
 
   // Formiranje odgovora u JSON formatu
   var out = {
-    speech: response,
-    displayText: response,
-    data: null
+    fulfillmentText: response
   };
 
   // Slanje odgovora

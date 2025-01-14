@@ -18,9 +18,9 @@
         <nav class="navbar">
             <img src="images/logo.png" class="logo">
             <ul class="links-container">
-                <li class="links-items"><a href="glavni" class="links">Početna</a></li>
-                <li class="links-items"><a href="about" class="links">Što je Putnik?</a></li>
-                <li class="links-items"><a href="razgovor" class="links">Razgovor</a></li>
+                <li class="links-items"><a href="#glavni" class="links">Početna</a></li>
+                <li class="links-items"><a href="#about" class="links">Što je Putnik?</a></li>
+                <li class="links-items"><a href="#razgovor" class="links">Razgovor</a></li>
 
             </ul>
 
@@ -33,7 +33,7 @@
                 <p class="info-tekst">Mogu ti pomoći odabrati savršeno mjesto za putovanje!</p>
 
                 <div class="info-gumb">
-                    <a href="#" class="btn">Započni razgovor!</a>
+                    <a href="#razgovor" class="btn">Započni razgovor!</a>
 
                 </div>
 
@@ -69,7 +69,9 @@
     <section id="razgovor">
 
         <div class="razgovor-bot">
-            
+            <iframe allow="microphone;" width="350" height="430"
+                src="https://console.dialogflow.com/api-client/demo/embedded/43a2d910-3700-4cc6-9dd0-fcedba210016">
+            </iframe>
         </div>
         <div class="ragovor-img-container">
             <div class="razgovor-img">
@@ -78,9 +80,11 @@
             </div>
         </div>
 
-        
+
 
     </section>
+
+    <script src="chatbot.js"></script>
 </body>
 
 </html>

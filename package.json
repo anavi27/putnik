@@ -1,7 +1,7 @@
 {
-    "name": "einstein-bot-webhook",
+    "name": "putnik-bot-webhook",
     "version": "1.0.0",
-    "description": "Einstein Bot Webhook",
+    "description": "Putnik Bot Webhook",
     "main": "index.js",
     "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

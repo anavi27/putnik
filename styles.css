@@ -170,49 +170,42 @@ body {
 }
 
 
-#razgovor{
+#razgovor {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    grid-area: 8rem;
-    padding: 4rem 10vw; /* Unutrašnji razmak */
-    max-width: 100%; /* Ograničava širinu sekcije */
+    justify-content: center; /* Centriranje svih elemenata */
+    align-items: center; /* Vertikalno poravnanje */
+    gap: 50px; /* Razmak između dvaju divova */
+    padding: 5rem 10vw; /* Unutrašnji razmak */
+    max-width: 100%;
     overflow: hidden; /* Sprječava prelazak sadržaja izvan okvira */
 }
 
-.razgovor-img-container{
+.razgovor-bot {
+    /* Ovdje dodajemo auto marginu sa strane kako bi bili centrirani */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.razgovor-img-container {
     position: relative;
     display: flex;
     width: 20rem;
     height: 35rem;
     flex: 0 0 auto;
-    justify-content: center;
+    justify-content: center; /* Središnji raspored slike */
+    align-items: center;
 }
 
-.razgovor-img{
+.razgovor-img {
     width: 70%;
     max-height: 70%;
     overflow: hidden;
     border-radius: 10rem;
 }
 
-.razgovor-img img{
-    width: 70%;
-    height: 70%;
+.razgovor-img img {
+    width: 100%; /* Podesiti na 100% širine kako bi slika popunila prostor */
+    height: auto;
     object-fit: contain;
-}
-
-.razgovor-bot{
-    flex: 1;
-    padding: 8rem;
-    color: #7E380E;
-    width: 100%;
-    font-family: "Montserrat", serif; /* Koristi definiranu tipografiju */
-    line-height: 1.8rem; /* Poboljšava čitljivost */
-    background-color: white;
-    max-width: 50%; /* Ograničava maksimalnu širinu teksta */
-    border-radius: 10rem;
-    border: 5px dotted #7E380E; /* Dodaje narančasti isprekidani obrub */
-    box-shadow: 10px 10px #ED935D
-
 }

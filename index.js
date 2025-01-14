@@ -1,39 +1,62 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const request = require('request')
-const app = express()
-app.set('port', (process.env.PORT || 5000))
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+app.set('port', (process.env.PORT || 5000));
+
 // Process application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.urlencoded({ extended: false }));
 // Process application/json
-app.use(bodyParser.json())
-app.use(express.static('public'))
+app.use(bodyParser.json());
+
 // Index route
 app.get('/', function (req, res) {
-res.send('Hello world, I am EinsteinBot!.')
-})
-app.post('/emc2/', function (req, res) {
-console.log(JSON.stringify(req.body));
-var weight = req.body.result.parameters.weight;
-var m = weight.amount;
-var weight_unit = weight.unit;
-//convert weight into kg
-if (weight_unit == 'g'){
-m = m/1000.0;
-}
-var c2 = 9 * 10^16; //in m^2/s^2
-var e = m * c2;
-res.setHeader('Content-Type', 'application/json');
-var botSpeech = "Energy that the system can create is " + e
-+ " Joules.";
-out = {speech: botSpeech,
-displayText: botSpeech,
-data: null};
-var outString = JSON.stringify(out);
-console.log('Out:' + outString);
-res.send(outString);
-})
-// Spin up the server
-app.listen(app.get('port'), function() {
-console.log('running on port', app.get('port'))
-})
+  res.send('Bok, ja sam Putnik!');
+});
+
+// POST route za odgovaranje na godišnja doba
+app.post('/season/', function (req, res) {
+  console.log(JSON.stringify(req.body));
+
+  // Preuzimanje parametra "season" iz tela zahteva
+  var season = req.body.queryResult.parameters.season.toLowerCase();
+  
+  // Odgovor na osnovu godišnjeg doba
+  var response = '';
+
+  switch (season) {
+    case 'proljeće':
+    case 'spring':
+      response = 'Proljeće je vrijeme obnove, sve cvjeta!';
+      break;
+    case 'ljeto':
+    case 'summer':
+      response = 'Ljeto je toplo i sunčano, savršen trenutak za odmor!';
+      break;
+    case 'jesen':
+    case 'fall':
+      response = 'Jesen je vrijeme za berbu i pripremu za zimu.';
+      break;
+    case 'zima':
+    case 'winter':
+      response = 'Zima donosi hladnoću i snijeg, vrijeme za odmor i uživanje u toplom domu!';
+      break;
+    default:
+      response = 'Nisam siguran na koje godišnje doba misliš, možeš li biti precizniji?';
+  }
+
+  // Formiranje odgovora u JSON formatu
+  var out = {
+    speech: response,
+    displayText: response,
+    data: null
+  };
+
+  // Slanje odgovora
+  res.setHeader('Content-Type', 'application/json');
+  res.send(JSON.stringify(out));
+});
+
+// Pokretanje servera
+app.listen(app.get('port'), function () {
+  console.log('Running on port', app.get('port'));
+});

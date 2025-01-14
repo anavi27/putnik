@@ -1,0 +1,218 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    color: white;
+    font-family: "Montserrat", serif;
+    font-weight: 300;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    height: 5rem;
+    padding: 0 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.logo {
+    height: 5rem;
+}
+
+.links-container {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.links {
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    color: #7E380E;
+}
+
+/* Main Section */
+#glavni {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    padding: 0 10vw;
+    display: flex; /* Koristimo flex za raspored */
+    justify-content: space-between; /* Razmak između elemenata */
+    align-items: center; /* Poravnanje po vertikali */
+}
+
+/* Left Section */
+.informacije {
+    flex: 1; /* Omogućava fleksibilan prostor za tekst */
+    min-width: 350px;
+}
+
+.info-heading {
+    font-size: 3.75rem;
+    font-weight: 800;
+    line-height: 5.5rem;
+    color: #7E380E ;
+}
+
+.info-heading2 {
+    font-size: 2.75rem;
+    font-weight: 500;
+    line-height: 3rem;
+    color: #7E380E;
+}
+
+.info-heading span {
+    color: #ED935D;
+}
+
+.info-tekst {
+    line-height: 2rem;
+    margin: 2rem 0;
+    margin-bottom: 3rem;
+    color: #7E380E;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 1rem 2rem;
+    background: #7E380E;
+    border-radius: 2rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: white;
+}
+
+/* Right Section */
+.info-glavni-slika {
+    flex: 1; /* Omogućava fleksibilan prostor za sliku */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-slika {
+    max-width: 100%; /* Slika se prilagođava prostoru */
+    height: auto;
+    object-fit: contain;
+}
+
+#about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: 8rem;
+    padding: 4rem 10vw; /* Unutrašnji razmak */
+    max-width: 100%; /* Ograničava širinu sekcije */
+    overflow: hidden; /* Sprječava prelazak sadržaja izvan okvira */
+}
+
+.about-img-container{
+    position: relative;
+    display: flex;
+    width: 20rem;
+    height: 35rem;
+    flex: 0 0 auto;
+    justify-content: center;
+}
+
+.about-img{
+    width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    border-radius: 10rem;
+}
+
+.about-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.about-text{
+    flex: 1;
+    padding: 8rem;
+    color: #7E380E;
+    width: 100%;
+    font-family: "Montserrat", serif; /* Koristi definiranu tipografiju */
+    line-height: 1.8rem; /* Poboljšava čitljivost */
+    background-color: white;
+    max-width: 50%; /* Ograničava maksimalnu širinu teksta */
+    border-radius: 10rem;
+    border: 5px dotted #7E380E; /* Dodaje narančasti isprekidani obrub */
+    box-shadow: 10px 10px #ED935D
+
+}
+.about-naslov {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.about-obicni {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+
+#razgovor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: 8rem;
+    padding: 4rem 10vw; /* Unutrašnji razmak */
+    max-width: 100%; /* Ograničava širinu sekcije */
+    overflow: hidden; /* Sprječava prelazak sadržaja izvan okvira */
+}
+
+.razgovor-img-container{
+    position: relative;
+    display: flex;
+    width: 20rem;
+    height: 35rem;
+    flex: 0 0 auto;
+    justify-content: center;
+}
+
+.razgovor-img{
+    width: 70%;
+    max-height: 70%;
+    overflow: hidden;
+    border-radius: 10rem;
+}
+
+.razgovor-img img{
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.razgovor-bot{
+    flex: 1;
+    padding: 8rem;
+    color: #7E380E;
+    width: 100%;
+    font-family: "Montserrat", serif; /* Koristi definiranu tipografiju */
+    line-height: 1.8rem; /* Poboljšava čitljivost */
+    background-color: white;
+    max-width: 50%; /* Ograničava maksimalnu širinu teksta */
+    border-radius: 10rem;
+    border: 5px dotted #7E380E; /* Dodaje narančasti isprekidani obrub */
+    box-shadow: 10px 10px #ED935D
+
+}

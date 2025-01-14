@@ -209,3 +209,97 @@ body {
     height: auto;
     object-fit: contain;
 }
+
+/* Mobilni uređaji */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        height: auto;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .links-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .links {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    /* Glavni odjeljak */
+    #glavni {
+        flex-direction: column; /* Stavlja elemente jedan ispod drugog */
+        padding: 2rem 5vw;
+    }
+
+    .info-heading {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .info-heading2 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .info-tekst {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .info-glavni-slika {
+        margin-top: 2rem;
+    }
+
+    /* Sekcija About */
+    #about {
+        flex-direction: column; /* Prebacuje na vertikalni raspored */
+        padding: 2rem 5vw;
+    }
+
+    .about-img-container {
+        width: 15rem;
+        height: 25rem;
+        margin-bottom: 2rem;
+    }
+
+    .about-text {
+        padding: 1rem;
+        max-width: 100%; /* Omogućava tekstu da zauzme cijelu širinu */
+        font-size: 1rem;
+        border-radius: 1rem;
+    }
+
+    .about-naslov {
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+    }
+
+    /* Sekcija Razgovor */
+    #razgovor {
+        flex-direction: column; /* Vertikalni raspored elemenata */
+        padding: 2rem 5vw;
+    }
+
+    .razgovor-bot,
+    .razgovor-img-container {
+        flex: none; /* Onemogućava rastezanje elemenata */
+        width: 100%;
+        justify-content: center;
+    }
+
+    .razgovor-img-container {
+        margin-top: 2rem;
+    }
+
+    .razgovor-img {
+        width: 100%; /* Slika zauzima cijelu širinu roditelja */
+        max-height: auto;
+        border-radius: 1rem;
+    }
+}
+
